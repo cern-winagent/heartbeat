@@ -45,8 +45,8 @@ namespace heartbeat
                     BuildNumber = OS["BuildNumber"].ToString(),
                     OperatingSystem = OS["Caption"].ToString(),
                     Version = OS["Version"].ToString(),
-                    LastBootUpTime = ManagementDateTimeConverter.ToDateTime(OS["LastBootUpTime"].ToString()),
-                    LocalDateTime = ManagementDateTimeConverter.ToDateTime(OS["LocalDateTime"].ToString())
+                    LastBootUpTime = ManagementDateTimeConverter.ToDateTime(OS["LastBootUpTime"].ToString()).ToUniversalTime(),
+                    DateTime = ManagementDateTimeConverter.ToDateTime(OS["LocalDateTime"].ToString()).ToUniversalTime()
                 };
 
                 return operativeSystem;

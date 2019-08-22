@@ -18,6 +18,6 @@ namespace heartbeat.Models
 
         public DateTime LastBootUpTime { get; set; }
 
-        public DateTime LocalDateTime { get; set; }
+        public DateTime DateTime { get; set; }
     }
 }
