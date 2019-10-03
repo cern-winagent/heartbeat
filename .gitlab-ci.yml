@@ -4,7 +4,7 @@ stages:
   - deploy
 
 variables:
-  assembly_extension: "dll"
+  ASSEMBLY_EXTENSION: "dll"
 
 .build_scripts : &build_scripts
   before_script:
@@ -22,7 +22,7 @@ test_build:
   except:
     - tags
   <<: *build_scripts
-  
+
 
 build:
   stage: build
@@ -57,7 +57,7 @@ release_qa:
     # This needs to be changed by GitLab
     # Release creation should be 'keyword based'
     - DeployQA
-  
+
 
 release_production:
   stage: deploy
