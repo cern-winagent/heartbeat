@@ -12,6 +12,8 @@ namespace heartbeat
     [PluginAttribute(PluginName = "HeartBeat")]
     public class IHeartbeat : IInputPlugin
     {
+        public event EventHandler<MessageEventArgs> MessageEvent;
+
         /// <summary>
         /// 
         /// </summary>
